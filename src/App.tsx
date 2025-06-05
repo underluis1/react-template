@@ -1,5 +1,6 @@
 
 import { Button } from './components/ui/button'
+import Toast from './components/Elementi/Toast'
 import './App.css'
 //test branch
 function App() {
@@ -7,10 +8,12 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col items-center justify-center min-h-screen bg-black text-white'>
-        <h1 className='text-4xl font-bold mb-4'>Vite + React + Tailwind CSS</h1>
-        <p></p>
-        <Button>Hello</Button>
+      <div className='flex flex-col items-center justify-center min-h-screen bg-testing text-white gap-[12px]'>
+        <h1 className='text-4xl font-bold mb-4'>Template Raffaele Lugibello </h1>
+        <p> Il template comprende React - Vite con:</p>
+        <p> Tailwind, Shadcn, Supabase, tspattern, </p>
+        <Button>Test</Button>
+        <Toast></Toast>
          
       </div>
     </>
