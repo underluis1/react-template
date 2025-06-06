@@ -9,7 +9,7 @@ function App() {
     <>
       
       <Router>
-        <Toaster /> 
+        <Toaster position='top-right'/> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />

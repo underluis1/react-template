@@ -12,9 +12,11 @@ const Home = () => {
       <Button
         onClick={() =>
           toast('Esempio di toast personalizzato', {
+            position: 'top-right',
             style: {
               background: '#F00000',
               color: '#000000',
+              
             },
           })
         }
@@ -28,6 +30,7 @@ const Home = () => {
           <Button>Auth</Button>
         </Link>
       </div>
+      <Button onClick={()=>toast.success("asdasd")}></Button>
     </div>
   )
 }

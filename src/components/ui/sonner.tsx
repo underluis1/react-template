@@ -9,8 +9,9 @@ const Toaster = ({ ...props }: ToasterProps) => {
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
-      position="top-right"
       richColors
+      {...props} // OK in fondo per non sovrascrivere
+      position="top-right" // ✅ default globale
       style={
         {
           "--normal-bg": "var(--popover)",
@@ -20,9 +21,12 @@ const Toaster = ({ ...props }: ToasterProps) => {
           "--success-text": "#027A48",
           "--error-bg": "#EDCDCD",
           "--error-text": "#BE0000",
+          "--info-bg": "#DDEEFF",
+          "--info-text": "#0044AA",
+          "--warning-bg": "#FFF4D4",
+          "--warning-text": "#B45309",
         } as React.CSSProperties
       }
-      {...props}
     />
   )
 }
