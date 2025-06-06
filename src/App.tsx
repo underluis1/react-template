@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button'
         <p> Il template comprende React - Vite con:</p>
         <p> Tailwind, Shadcn, Supabase, tspattern, React-hot-toast </p>
         
-        <Button onClick={() => showToast({message:"Exemple", color: "#F00000"})}>Toasst</Button>
+        <Button onClick={() => showToast({message:"Exemple", color: "#F00000", colorText: '#000000'})}>Toast</Button>
         <Toast></Toast> 
       </div>
     </>
