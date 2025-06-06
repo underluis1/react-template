@@ -1,6 +1,6 @@
 import './App.css'
-import Toast from './components/Elementi/Toast'
-
+import Toast, { showToast } from './components/Elementi/Toast'
+import { Button } from '@/components/ui/button'
 //test branch
   function App() {
   
@@ -11,7 +11,9 @@ import Toast from './components/Elementi/Toast'
         <h1 className='text-4xl font-bold mb-4'>Template Raffaele Lugibello </h1>
         <p> Il template comprende React - Vite con:</p>
         <p> Tailwind, Shadcn, Supabase, tspattern, React-hot-toast </p>
-        <Toast message='Exemple' color='#F00000'></Toast> 
+        
+        <Button onClick={() => showToast({message:"Exemple", color: "#F00000"})}>Toasst</Button>
+        <Toast></Toast> 
       </div>
     </>
   )

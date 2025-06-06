@@ -1,32 +1,26 @@
-import {Toaster, toast} from 'react-hot-toast';
-import { Button } from '../ui/button';
+import { Toaster, toast } from 'react-hot-toast';
 
-interface ToastProps {
+export interface ToastProps {
     message?: string;
     color?: string;
 }
 
-function Toast(toastProps: ToastProps) {
-    const { message } = toastProps || 'Default toast message';
-    const color = toastProps.color || 'bg-red-700';
-    
-    return (
-        <>
-        
-        <Button className='bg-red-700' onClick={()=> toast(message!)}> Toast </Button>
-        <Toaster 
-        position='top-right' 
-        toastOptions={{
+// Funzione helper per mostrare il toast
+export function showToast({ message = 'Default toast message', color = 'bg-red-700' }: ToastProps) {
+    toast(message, {
         duration: 4000,
         style: {
             background: color,
             color: '#fff',
         },
-        }}
-        />
-        
-        
-        </>
-    )
+    });
 }
-    export default Toast;
+
+// Solo il Toaster va nel componente React
+function Toast() {
+    return (
+        <Toaster position="top-right" />
+    );
+}
+
+export default Toast;
