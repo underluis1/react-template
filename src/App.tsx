@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 import Auth from './pages/Auth.tsx'
 import { Toaster } from 'sonner' 
-import Api from './pages/Api.tsx'
+import TestProject from './pages/TestProject.tsx'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/api" element={<Api />} />
+          <Route path="/api" element={<TestProject />} />
         </Routes>
       </Router>
     </>
