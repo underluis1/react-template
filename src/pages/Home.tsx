@@ -1,13 +1,20 @@
 import { Button } from '@/components/ui/button'
+
 import { Link } from 'react-router-dom'
 import { toast } from 'sonner' // ✅ usa sonner
 
+
+
+
 const Home = () => {
+  
+  
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-testing text-white gap-4">
       <h1 className="text-4xl font-bold mb-4">Template Raffaele Lugibello</h1>
       <p>Il template comprende React + Vite con:</p>
-      <p>Tailwind, Shadcn, Supabase, tspattern, Sonner (toast), React Router</p>
+      <p>Tailwind, Shadcn, Supabase, tspattern, Sonner (toast), React Router, axios</p>
 
       <Button
         onClick={() =>
@@ -31,7 +38,10 @@ const Home = () => {
         </Link>
       </div>
       <Button onClick={()=>toast.success("asdasd")}></Button>
+
+      
     </div>
+
   )
 }
 
