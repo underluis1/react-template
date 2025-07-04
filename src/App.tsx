@@ -7,7 +7,7 @@ import PrivateRoute from './routes/PrivateRoute.tsx'
 import PublicOnlyRoute from './routes/PublicOnlyRoute.tsx'
 import AuthListener from '@/components/reusable/AuthListener.tsx'
 import Dashboard from './pages/Dashboard.tsx'
-
+import TestSidebar from './pages/TestSidebar.tsx'
 
 function App() {
   return (
@@ -44,6 +44,16 @@ function App() {
             </PrivateRoute>
           }
         />
+
+           <Route
+          path="/test"
+          element={
+            <PrivateRoute>
+              <TestSidebar></TestSidebar>
+            </PrivateRoute>
+          }
+        />
+
         {/* Puoi aggiungerne altre protette così */}
         {/* <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}
       </Routes>

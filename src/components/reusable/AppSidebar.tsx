@@ -8,6 +8,7 @@ import { useProfile } from "@/hooks/useProfile"
 const links = [
   { to: "/", label: "Home", icon: <Home className="w-4 h-4" /> },
   { to: "/dashboard", label: "Dashboard", icon: <LayoutDashboard className="w-4 h-4" /> },
+  { to: "/test", label: "test", icon: <LogOut className="w-4 h-4" /> },
 ]
 
 export const AppSidebar = () => {
@@ -18,14 +19,19 @@ export const AppSidebar = () => {
   return (
     <aside className="h-screen w-60 bg-muted p-4 flex flex-col justify-between fixed">
       <div>
-        <h2 className="text-lg font-bold mb-6">Benvenuto {user.profile?.full_name}</h2>
-        <nav className="space-y-2">
+        <div className="flex flex-row min-h-[100px]">
+       <h2 className="text-lg font-bold mb-6">
+        Benvenuto {user.loading ? "..." : user.profile?.full_name || "Utente"}
+      </h2>
+      </div>
+
+        <nav className="space-y-2 ">
           {links.map(({ to, label, icon }) => (
             <Link to={to} key={to}>
               <Button
                 variant="ghost"
                 className={cn(
-                  "w-full justify-start gap-2",
+                  "w-full justify-start gap-2 mb-[6px] hover:bg-primary/10 ",
                   location.pathname === to && "bg-primary/10 text-primary"
                 )}
               >
