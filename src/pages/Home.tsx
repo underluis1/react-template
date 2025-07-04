@@ -38,7 +38,9 @@ const Home = () => {
         </Link>
         
       </div>
-      
+      <Link to="/dashboard">
+        <Button>Dashboard</Button>
+      </Link>  
       <Logout></Logout>
       
     </div>
