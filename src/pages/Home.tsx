@@ -36,6 +36,7 @@ const Home = () => {
         <Link to="/auth">
           <Button>Auth</Button>
         </Link>
+        
       </div>
       <Button onClick={()=>toast.success("asdasd")}></Button>
 
