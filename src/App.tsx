@@ -5,16 +5,17 @@ import Auth from './pages/Auth.tsx'
 import { Toaster } from 'sonner' 
 import PrivateRoute from './routes/PrivateRoute.tsx'
 import PublicOnlyRoute from './routes/PublicOnlyRoute.tsx'
+import AuthListener from '@/components/reusable/AuthListener.tsx'
+import Dashboard from './pages/Dashboard.tsx'
 
 
 function App() {
   return (
     <>
-      
+      <AuthListener />
       <Router>
       <Toaster position='top-right' />
       <Routes>
-        {/* Rotta pubblica */}
          {/* Rotta pubblica ma accessibile solo se NON loggato */}
         <Route
           path="/auth"
@@ -31,6 +32,15 @@ function App() {
           element={
             <PrivateRoute>
               <Home />
+            </PrivateRoute>
+          }
+        />
+
+          <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard></Dashboard>
             </PrivateRoute>
           }
         />
