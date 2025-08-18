@@ -16,6 +16,7 @@ const columns: GridColDef[] = [
   },
   { field: "created_at", headerName: "created_at", flex: 1, minWidth: 130 },
 ];
+
 const handleClick = () => {
   alert("click");
 };
@@ -28,7 +29,7 @@ export default function TableGetIn() {
     <>
       {isLoading && (
         <>
-          <p>Caricamento in corso</p>
+          <p className="text-center">Caricamento in corso</p>
         </>
       )}
 
@@ -45,7 +46,7 @@ export default function TableGetIn() {
           initialState={{ pagination: { paginationModel } }}
           pageSizeOptions={[15, 25]}
           checkboxSelection
-          sx={{ border: 3 }}
+          sx={{ border: 1 }}
           onRowClick={handleClick}
         />
       </Paper>

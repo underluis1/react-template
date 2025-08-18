@@ -9,6 +9,7 @@ import AuthListener from "@/components/reusable/AuthListener.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import TestSidebar from "./pages/TestSidebar.tsx";
 import TableReusable from "./pages/TableReusable.tsx";
+import TableExemple from "./pages/TableExemple.tsx";
 function App() {
   return (
     <>
@@ -59,6 +60,15 @@ function App() {
             element={
               <PrivateRoute>
                 <TableReusable></TableReusable>
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/table2"
+            element={
+              <PrivateRoute>
+                <TableExemple></TableExemple>
               </PrivateRoute>
             }
           />
