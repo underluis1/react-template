@@ -1,29 +1,29 @@
-import { Button } from '@/components/ui/button'
-import { Link } from 'react-router-dom'
-import { toast } from 'sonner' // ✅ usa s
-import Logout from '@/components/reusable/logout'
-import { useProfile } from '@/hooks/useProfile'
-
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { toast } from "sonner";
+import Logout from "@/components/reusable/logout";
+import { useProfile } from "@/hooks/useProfile";
 
 const Home = () => {
-  const user = useProfile()
- 
+  const user = useProfile();
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-testing text-white gap-4">
-        <p>{user.profile?.id}</p>
+      <p>{user.profile?.id}</p>
       <h1 className="text-4xl font-bold mb-4">Template </h1>
       <p>Il template comprende React + Vite con:</p>
-      <p>Tailwind, Shadcn, Supabase, tspattern, Sonner (toast), React Router, axios, Zustand </p>
+      <p>
+        Tailwind, Shadcn, Supabase, tspattern, Sonner (toast), React Router,
+        axios, Zustand, tanQuery
+      </p>
 
       <Button
         onClick={() =>
-          toast('Esempio di toast personalizzato', {
-            position: 'top-right',
+          toast("Esempio di toast personalizzato", {
+            position: "top-right",
             style: {
-              background: '#F00000',
-              color: '#000000',
-              
+              background: "#F00000",
+              color: "#000000",
             },
           })
         }
@@ -36,16 +36,13 @@ const Home = () => {
         <Link to="/auth">
           <Button>Auth</Button>
         </Link>
-        
       </div>
       <Link to="/dashboard">
         <Button>Dashboard</Button>
-      </Link>  
+      </Link>
       <Logout></Logout>
-      
     </div>
+  );
+};
 
-  )
-}
-
-export default Home
+export default Home;
