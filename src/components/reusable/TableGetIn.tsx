@@ -29,7 +29,7 @@ export default function TableGetIn() {
     <>
       {isLoading && (
         <>
-          <p className="text-center">Caricamento in corso</p>
+          <p>caricamento in corso</p>
         </>
       )}
 
