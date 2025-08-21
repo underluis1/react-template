@@ -13,6 +13,7 @@ import TableExemple from "./pages/TableExemple.tsx";
 import TanQuery from "@/pages/TanQuery.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import TestHook from "./pages/TestHook.tsx";
 const queryClient = new QueryClient();
 function App() {
   return (
@@ -84,6 +85,15 @@ function App() {
               element={
                 <PrivateRoute>
                   <TanQuery />
+                </PrivateRoute>
+              }
+            />
+
+            <Route
+              path="/testhook"
+              element={
+                <PrivateRoute>
+                  <TestHook></TestHook>
                 </PrivateRoute>
               }
             />

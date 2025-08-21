@@ -4,7 +4,7 @@ import type { DataInProps } from "./GetDataIn";
 
 export default function GetDataIn() {
   const { data, error, isLoading, isError } = useQuery({
-    queryKey: ["DataIN"],
+    queryKey: ["DataIn"],
     queryFn: getDataIn,
     staleTime: 30_000,
     refetchOnWindowFocus: "always", // 👈 forza refetch anche se fresh
