@@ -10,10 +10,10 @@ import Dashboard from "./pages/Dashboard.tsx";
 import TestSidebar from "./pages/TestSidebar.tsx";
 import TableReusable from "./pages/TableReusable.tsx";
 import TableExemple from "./pages/TableExemple.tsx";
-import TanQuery from "@/pages/TanQuery.tsx";
+import TanQuery from "@/pages/tanTest/TanQuery.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import TestHook from "./pages/TestHook.tsx";
+import TestHook from "./pages/tanTest/TestHook.tsx";
 const queryClient = new QueryClient();
 function App() {
   return (

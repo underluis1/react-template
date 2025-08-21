@@ -13,3 +13,5 @@ export async function GetProva(): Promise<ProvaProps[]> {
   if (error) throw error;
   return data ?? [];
 }
+
+

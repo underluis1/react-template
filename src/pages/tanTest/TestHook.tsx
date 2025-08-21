@@ -1,11 +1,12 @@
-import { GetProvaTask } from "@/hooks/UseGetProva";
+import { GetProvaTask } from "@/hooks/Prova/UseGetProva";
+import { DialogCreate } from "@/components/Prova/DialogCreate";
 import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import Button from "@mui/material/Button";
+
 const TestHook = () => {
   const { error, data = [], isLoading, isError } = GetProvaTask();
   if (isError) {
@@ -28,20 +29,18 @@ const TestHook = () => {
     <>
       <div>
         <div className="flex flex-row p-4 items-start justify-between">
-          <Button>Crea record</Button>
+          <DialogCreate></DialogCreate>
         </div>
         <ul className="flex flex-col p-4">
           {data.map((element) => (
-            <>
-              <li key={element.id} className="pb-4">
-                <Card>
-                  <CardContent>
-                    <CardTitle>{element.name}</CardTitle>
-                    <CardDescription>{element.age}</CardDescription>
-                  </CardContent>
-                </Card>
-              </li>
-            </>
+            <li key={element.id} className="pb-4">
+              <Card>
+                <CardContent>
+                  <CardTitle>{element.name}</CardTitle>
+                  <CardDescription>{element.age}</CardDescription>
+                </CardContent>
+              </Card>
+            </li>
           ))}
         </ul>
       </div>
