@@ -1,4 +1,4 @@
-import TableGetIn from "@/components/reusable/TableGetIn";
+import TableGetIn from "@/components/Testing/Table/TableGetIn";
 import { DialogTest } from "@/components/Dialog/DialogTest";
 export default function TestSidebar() {
   return (

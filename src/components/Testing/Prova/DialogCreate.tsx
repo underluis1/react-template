@@ -12,7 +12,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { useCreateProva } from "@/hooks/Prova/useCreateProva";
+import { useCreateProva } from "@/hooks/Testing/Prova/useCreateProva";
 
 export function DialogCreate() {
   const [nome, setNome] = useState("");

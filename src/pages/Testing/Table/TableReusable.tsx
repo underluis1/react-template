@@ -1,5 +1,5 @@
-import TablePagination from "@/components/reusable/TablePagination";
-import type { TableType } from "@/components/reusable/TablePagination";
+import TablePagination from "@/components/Testing/Table/TablePagination";
+import type { TableType } from "@/components/Testing/Table/TablePagination";
 const list: TableType[] = [
   {
     id: 1,

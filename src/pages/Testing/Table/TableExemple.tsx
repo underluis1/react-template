@@ -1,4 +1,4 @@
-import TableGetIn from "@/components/reusable/TableGetIn";
+import TableGetIn from "@/components/Testing/Table/TableGetIn";
 
 const TableExemple = () => {
   return (

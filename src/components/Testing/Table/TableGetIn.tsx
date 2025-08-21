@@ -1,7 +1,7 @@
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
-import { UseGetDataIn } from "@/hooks/UseGetDataIn";
+import { UseGetDataIn } from "@/hooks/Testing/UseGetDataIn";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", flex: 0.3, minWidth: 70 },

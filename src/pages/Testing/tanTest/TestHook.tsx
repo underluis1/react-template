@@ -1,5 +1,5 @@
-import { GetProvaTask } from "@/hooks/Prova/UseGetProva";
-import { DialogCreate } from "@/components/Prova/DialogCreate";
+import { GetProvaTask } from "@/hooks/Testing/Prova/UseGetProva";
+import { DialogCreate } from "@/components/Testing/Prova/DialogCreate";
 import {
   Card,
   CardContent,
