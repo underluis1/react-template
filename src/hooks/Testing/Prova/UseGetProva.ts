@@ -6,8 +6,11 @@ export const GetProvaTask = () => {
 return useQuery<ProvaProps[], Error>({
         queryKey: ["Prova"],
         queryFn: GetProva,
-        staleTime: 30_000,
+        staleTime: 3000,
         refetchOnWindowFocus: "always", 
+        //se vuoi fare il polling ogni 3 secondi fai cosi:
+        refetchInterval: 3000,           // <-- fa polling
+        refetchIntervalInBackground: true,
  });
  
 } 
