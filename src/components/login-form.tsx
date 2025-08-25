@@ -61,6 +61,7 @@ export function LoginForm({
                   placeholder="m@example.com"
                   required
                   value={email}
+                  variant="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>

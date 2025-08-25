@@ -9,9 +9,9 @@ const inputVariants = cva(
       variant: {
         primary: "border-input bg-white text-foreground",
         email:
-          "border-input text-[14px] text-primary bg-white text-foreground focus-visible:border-blue-500 focus-visible:ring-blue-500/50",
+          "border-input text-[14px] text-primary  text-foreground focus-visible:border-blue-500 focus-visible:ring-blue-500/50",
         password:
-          "border-input text-[14px] bg-input text-foreground tracking-wide focus-visible:border-red-500 focus-visible:ring-red-500/50",
+          "border-input text-[14px]  text-foreground tracking-wide focus-visible:border-red-500 focus-visible:ring-red-500/50",
         deactive: "border-muted bg-muted text-muted-foreground",
       },
       size: {

@@ -6,7 +6,7 @@ export default function Dashboard() {
   const user = useProfile();
   return (
     <>
-      <div className="flex flex-row min-h-screen w-full">
+      <div className="flex flex-row min-h-screen bg-background w-full">
         {/* Sidebar can be added here */}
         <AppSidebar></AppSidebar>
 
